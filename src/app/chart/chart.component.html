@@ -1,0 +1,11 @@
+<div class="rounded px-10 pt-4" [ngStyle]="cardBackground">
+    <ng-content select='.top'></ng-content>
+    <div class="container pb-4" [ngStyle]='{"background-color": containerBackground}'>
+        <div class='progress-percentage-wrapper d-flex mx-auto justify-content-center pt-4'>
+            <div class="progress-percentage ng-cloak" [ngStyle]='{"color": containerBackground === "#fff" ? "#000" : "#fff"}'>{{brand}}</div>
+            <round-progress tooltip="{{current}}%" [color]='color' [radius]="70" [clockwise]="false" [rounded]="true" [responsive]="false" [duration]="800" [stroke]="7.5" [animation]="'easeInOutQuart'" [background]="background" [current]="current" [max]="max"></round-progress>
+
+        </div>
+        <ng-content select='.bottom'></ng-content>
+    </div>
+</div>

@@ -1,0 +1,173 @@
+<div class="body containers px-3" [ngStyle]="{'background-color':'#F2F7FC'}">
+    <div class="row py-2">
+        <div class='col-md-8'>
+            <h5><b>Dashboard</b></h5>
+        </div>
+        <div class='col-md-4 d-flex justify-content-between align-items-center'>
+            <div><span class="light-blue-bg rounded p-2"><img src="assets/icon/spanner.svg" alt=""></span> Customize Dashboard</div>
+            |
+            <div>{{date |date}}</div>
+        </div>
+    </div>
+
+    <div class="row mt-2 mb-5">
+        <div class="col-md-6">
+            <div class='left-card rounded p-3'>
+                <div class="row">
+                    <div class="col-4 offset-md-8">
+                        <span class="close text-white">
+                          <img src="assets/icon/close.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="row flex-md-row-reverse">
+                    <div class="col-md-3 imgContainer">
+                        <img src="assets/icon/laptop.svg" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <h6 class="mb-3" [ngStyle]="{'color': '#78C2ED'}">{{'Welcome back! Chidimma.' |uppercase}}</h6>
+                        <p class="text-white">See overview of analytics and reporting metrics and a lot more interesting stuffs you can do here.</p>
+                        <button class="btn bg-white btn-lg" [ngStyle]="{'color':'#1B5BAC'}" type="button">Take A Tour</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class='right-card rounded p-3'>
+                <div class="row">
+                    <div class="col-4 offset-md-8">
+                        <span class="close text-white py-2 mt-2"></span>
+                    </div>
+                </div>
+                <div class="row flex-md-row-reverse">
+                    <div class="col-md-3 imgContainer">
+                        <img src="assets/icon/windows.svg" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <h6 class="mb-3" [ngStyle]="{'color': '#133F77', 'white-space': 'nowrap'}">OPTIMIZED APPLICATION PROCESSING</h6>
+                        <p class="">We’ve optimized the system to process your application as fast as possible. Click on the button below to get started.</p>
+                        <button class="btn text-white btn-lg" [ngStyle]="{'background-color':'#1B5BAC', 'box-shadow': '0px 10px 20px rgba(16, 60, 116, 0.3)'}" type="button">New Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <app-chart [brand]="'CAPEX'" [color]='"#1B5BAC"' [background]='"#E2EDF8"' [max]='100' [current]='64'>
+                <div class="container top">
+                    <div class="row mb-3">
+                        <div class="col-7">
+                            <div><b>Annual Play Budget</b></div>
+                            <span [ngStyle]="{'color':'#19304D'}">Summary</span>
+                        </div>
+                        <div class="col-5">
+                            <div class='p-1' [ngStyle]="{'box-shadow':'0px 10px 20px rgba(184, 193, 209, 0.26)'}">This Year
+                                <img src='assets/icon/caret-down.svg' alt=''>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom rounded px-3 py-3 mt-4" [ngStyle]="{'background-color':'#FBFCFE'}">
+                    <div class="row">
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#19304D', 'white-space': 'nowrap'}">Total Play (NGN)</div>
+                            <div><b>50,000,000</b></div>
+                        </div>
+                        <div class="col-6">
+                            <div><span class="rounded-circle d-inline-block mr-2" [ngStyle]="{'background-color':'#1B5BAC'}"></span> Total Spent</div>
+                            <div><span class="rounded-circle d-inline-block mr-2" [ngStyle]="{'background-color':'#D7E2ED'}"></span> Balance</div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#19304D', 'white-space': 'nowrap'}">Total Spent (NGN)</div>
+                            <div><b>50,000,000</b></div>
+                        </div>
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#19304D'}">Balance (NGN)</div>
+                            <div><b>50,000,000</b></div>
+                        </div>
+                    </div>
+                </div>
+            </app-chart>
+        </div>
+        <div class="col-md-4">
+            <app-chart [brand]="'OPEX'" [color]='"#FF6542"' [background]='"#F8E9E2"' [max]='100' [current]='50'>
+                <div class="container top">
+                    <div class="row mb-3">
+                        <div class="col-7">
+                            <div><b>Annual Work Budget</b></div>
+                            <span [ngStyle]="{'color':'#19304D'}">Summary</span>
+                        </div>
+                        <div class="col-5">
+                            <div class='p-1' [ngStyle]="{'box-shadow':'0px 10px 20px rgba(184, 193, 209, 0.26)'}">This Year
+                                <img src='assets/icon/caret-down.svg' alt=''>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom rounded px-3 py-3 mt-4" [ngStyle]="{'background-color':'#FFF7F5'}">
+                    <div class="row">
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#19304D', 'white-space': 'nowrap'}">Total Work (NGN)</div>
+                            <div><b>50,000,000</b></div>
+                        </div>
+                        <div class="col-6">
+                            <div><span class="rounded-circle d-inline-block mr-2" [ngStyle]="{'background-color':'#FF6542'}"></span> Total Spent</div>
+                            <div><span class="rounded-circle d-inline-block mr-2" [ngStyle]="{'background-color':'#EEDFD8'}"></span> Balance</div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#19304D', 'white-space': 'nowrap'}">Total Spent (NGN)</div>
+                            <div><b>50,000,000</b></div>
+                        </div>
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#19304D'}">Balance (NGN)</div>
+                            <div><b>50,000,000</b></div>
+                        </div>
+                    </div>
+                </div>
+            </app-chart>
+        </div>
+        <div class="col-md-4">
+            <app-chart [brand]="'ASSETS'" [color]='"#F6AE2D"' [containerBackground]='"rgba(0,0,0,.1)"' [cardBackground]='{"background-image":"linear-gradient(0deg, #0F9CDA 26.48%, #00C49A 175.16%)"}' [background]='"#fff"' [max]='100' [current]='80'>
+                <div class="top container">
+                    <div class="row mb-3">
+                        <div class="col-8">
+                            <div><b class="text-white">Cards Count</b></div>
+                            <span [ngStyle]="{'color':'#FFFFFF'}">Summary</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom rounded px-3 py-3 mt-4" [ngStyle]="{'background-color':'rgba(0,0,0,.2)'}">
+                    <div class="row">
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#FFFFFF'}">Total Cards</div>
+                            <div><b class='text-white'>50,000,000</b></div>
+                        </div>
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#FFFFFF'}"><span class="rounded-circle d-inline-block mr-2" [ngStyle]="{'background-color':'#F6AE2D'}"></span> In-use</div>
+                            <div [ngStyle]="{'color':'#FFFFFF'}"><span class="rounded-circle d-inline-block mr-2" [ngStyle]="{'background-color':'#FFFFFF'}"></span> In-active</div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#FFFFFF'}">Cards in-use</div>
+                            <div><b class='text-white'>50,000,000</b></div>
+                        </div>
+                        <div class="col-6">
+                            <div [ngStyle]="{'color':'#FFFFFF'}">In-active</div>
+                            <div><b class='text-white'>50,000,000</b></div>
+                        </div>
+                    </div>
+                </div>
+            </app-chart>
+        </div>
+    </div>
+</div>
